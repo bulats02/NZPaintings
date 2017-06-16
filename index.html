@@ -308,7 +308,7 @@ $(document).ready(function(){
 	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
         $('.row').append($ul3);
 	
-	  }else(!this.checked){
+	  }else if(!this.checked){
 		  $('.row').remove('#allprodList');
 	  }
        });
