@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>NZ Painting</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<script src="jquery-3.2.1.min.js"></script>   
+<script>
+$(document).ready(function(){
+
+        $.getJSON("ProductsPaintings.json", function(result){
+         var popularProd = '';
+         var onsaleProd = '';
+         var prodList = [];
+            $.each(result.products, function(i, field1){
+            while (prodList.length < 5){
+             if (field1.popularity == "High"){
+                  popularProd  += '<li><div class="bannerImg"><img src="'+field1.imgPath+'" style="width:250px;height:250px;"/></div>';
+                  popularProd  += '<h1 class="title">'+field1.Title+'</h1>';
+                  popularProd  += '<h3 class="category">'+field1.category+'</h3>';
+                  popularProd  += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field1.price+'</p>';
+                  popularProd  += '<p class="desc" style="font-size:20px;">'+field1.Description+'</p>';
+                  popularProd  += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field1.popularity+'</span>';
+                  popularProd  += '<br>';
+                  popularProd  += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field1.onsale+'</span>';
+                  popularProd  += '</li>';
+                  prodList.push(field1.productID);
+                          }
+                  return i < 20; 
+             
+             }
+           });
+            $.each(result.products, function(j, field2){
+             if (field2.onsale == "Yes"){
+                  onsaleProd   += '<li><div class="bannerImg"><img src="'+field2.imgPath+'" style="width:100px;height:100px;"/></div>';
+                  onsaleProd   += '<h1 class="title">'+field2.Title+'</h1>';
+                  onsaleProd   += '<h3 class="category">'+field2.category+'</h3>';
+                  onsaleProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field2.price+'</p>';
+                  onsaleProd   += '<p class="desc" style="font-size:20px;">'+field2.Description+'</p>';
+                  onsaleProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field2.popularity+'</span>';
+                  onsaleProd   += '<br>';
+                  onsaleProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field2.onsale+'</span>';
+                  onsaleProd   += '</li>';
+                      return j < 20;
+         
+           }
+                    
+            });
+        var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
+        $('#popularProducts').append($ul1);
+        var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
+        $('#dealsOftheDay').append($ul2);
+        });
+});  
+</script>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">New Zealand Painting</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">Products</a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="#membership">Membership</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <h1 class="name">New Zealand Painting</h1>
+                        <hr class="star-light">
+                    </div>
+                </div>
+            </div>
+				<section id="homeDisplay">
+				   <h3> Introduction </h3>
+				 </section>
+					
+				 <section id="popularProducts">
+				 <h3>Popular Paintings </h3>
+				</section>
+
+
+				<section id="dealsOftheDay">
+				  <h3>Deals of the Day </h3>
+						
+				</section>
+				
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Portfolio</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Membership Section -->
+    <section id="membership">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Membership Sign up</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form class="myForm" name="myForm" onsubmit="submitForm()">
+						<label>First Name</label>
+						<input type="text" id="fname" name="fname" placeholder="Your name.." required>
+
+						<label>Last Name</label>
+						<input type="text" id="lname" name="lname" placeholder="Your last name.." required>
+						
+						<label>Email Address</label>
+						<input type="email" id="email" name="email" placeholder="Your emaill address.." required>
+						
+						<label>Date</label>
+						<input type="date" id="DOB" name="DOB" required><br><br>
+						
+						<label>Gender:</label>
+						<input type="radio" id="gender" name="gender" value="male" checked> Male
+						<input type="radio" id="gender" name="gender" value="female"> Female<br><br>
+						
+						<input type="checkbox" name="agree" value="agree" required>
+						<label>I agree with the terms of service</label><br><br>
+						
+						 <input type="submit" value="Submit">
+					</form>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div id="aboutDisplay">
+				<aside id="map"></aside>
+				
+				<aside id="txt">
+				<p>NZ Painting was established in 1904 with the dream in mind of being able to supple high
+				quality artworks at an addorable price.Currently we have our online store located here in NZ but it 
+				has been our dream to make our artwork available to everyone around the world. NZ Painting now has the 
+				advantage of being able to provide art in a wide variety at an affordable price.</p>
+				
+				<p><b><i>Our Store Address</i></b><br><br>97 Clifton Road<br> Herne Bay<br>Auckland</p>
+				
+				<p><b><i>Email Us: </i></b><a href="mailto:NZPainting@paintings.co.nz">NZPainting@paintings.co.nz</a></p>
+				<p><b><i>Call Us: </i></b>09 8468725</p>
+				</aside>
+			</div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Bekfasts 2017
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+     <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.js"></script> -->
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(-36.844282, 174.730564);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+
+  var infowindow = new google.maps.InfoWindow({
+    content: "New Zealand Painting <br><br>97 Clifton Road <br>Herne Bay<br>Auckland<br>"
+  });
+  infowindow.open(map,marker);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt8Sh-20h7rmRpJiFx2xToMavYAkYK7b8&callback=myMap"></script>
+
+</body>
+
+</html>
