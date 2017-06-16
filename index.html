@@ -290,7 +290,7 @@ $(document).ready(function(){
            if (this.checked) {
                $.each(result.products, function(l, field4){    
 		  
-		  if (field3.category == "Abstract"){
+		  if (field4.category == "Abstract"){
                   allProd   += '<li><div class="productImg"><img src="'+field4.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
                   allProd   += '<h1 class="title">'+field4.Title+'</h1>';
                   allProd   += '<h3 class="category">'+field4.category+'</h3>';
@@ -302,7 +302,7 @@ $(document).ready(function(){
                   allProd   += '</li>';
 		
 	     }
-		 return k < 20;     
+		 return l < 20;     
 	  
           });
 	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
