@@ -278,6 +278,8 @@ $(document).ready(function(){
 		 return k < 20;     
 	  
           });
+	 var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
+        $('#productCategory').append($ul3);
 	  }
        });
 
@@ -285,8 +287,7 @@ $(document).ready(function(){
         $('#popularProducts').append($ul1);
         var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
         $('#dealsOftheDay').append($ul2);
-	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
-        $('#productCategory').append($ul3);
+	
 	
 		
         });
