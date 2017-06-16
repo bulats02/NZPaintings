@@ -273,9 +273,9 @@ input[type=submit]:hover {
 	margin: 20px 15px 20px 15px;
 	float: left;
 }
-#popularProducts{
+section #popularProducts{
 	width: 100%:
 }
-#dealsOftheDay{
+section #dealsOftheDay{
 	width: 100%:
 }
