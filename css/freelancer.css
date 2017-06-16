@@ -292,3 +292,16 @@ input[type=submit]:hover {
 	float: left;
 	margin:10px;
 }
+
+
+#productCategory{
+	width: 700px;
+	margin-bottom: 10px;
+}
+
+#productCategory h2 { margin: 200px 20px 20px 0;}
+
+
+
+#productCategory a { margin-left:10px;}
+
