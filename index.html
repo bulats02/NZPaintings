@@ -33,7 +33,7 @@ $(document).ready(function(){
             $.each(result.products, function(i, field1){
             while (popularprodArray1.length < 5){
              if (field1.popularity == "High"){
-                  popularProd  += '<li><div class="bannerImg"><img src="'+field1.imgPath+'" style="width:200px;height:200px;"/></div>';
+                  popularProd  += '<li><div class="bannerImg"><img src="'+field1.imgPath+'"style="width:180px;height:180px;"/></div>';
                   popularProd  += '<h4 class="title">'+field1.Title+'</h4>';
                   popularProd  += '<h5 class="category">'+field1.category+'</h5>';
                   popularProd  += '<p class="price" style="font-size:14px;"><b>Price:</b> $'+field1.price+'</p>';
