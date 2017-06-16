@@ -21,104 +21,7 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-	<script src="jquery-3.2.1.min.js"></script>   
-<script>
 	
-	
-function checkCategory(){
-	
-	$(document).ready(function(){
-		 $.getJSON("ProductsPaintings.json", function(result){
-			 //============PRODUCTS SECTION================//
-	     $("#checkbox1").change(function(){
-               $.each(result.products, function(k, field3){    
-		  if (this.checked) {
-		   field3.category="Abstract";
-		  if (field3.category == "Abstract"){
-                  allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;"/></div>';
-                  allProd   += '<h1 class="title">'+field3.Title+'</h1>';
-                  allProd   += '<h3 class="category">'+field3.category+'</h3>';
-                  allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
-                  allProd   += '<p class="desc" style="font-size:20px;">'+field3.Description+'</p>';
-                  allProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field3.popularity+'</span>';
-                  allProd   += '<br>';
-                  allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
-                  allProd   += '</li>';
-		 return k < 20;
-	     }
-		     
-	     }else{
-		     console.log("ERROR");
-	        }
-          });
-        });
-	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
-        $('#productCategory').append($ul3);
-     });
-  });
-}
-$(document).ready(function(){
-       
-        $.getJSON("ProductsPaintings.json", function(result){
-         var popularProd = '';
-         var onsaleProd = '';
-	 var allProd = '';
-         var popularprodArray1 = [];
-         var onsaleprodArray2 = [];
-	  //========POPULAR PRODUCTS SECTION ========//
-            $.each(result.products, function(i, field1){
-            while (popularprodArray1.length < 5){
-             if (field1.popularity == "High"){
-                  popularProd  += '<li><div class="bannerImg"><img src="'+field1.imgPath+'" style="width:180px;height:180px;"/></div>';
-                  popularProd  += '<h4 class="title">'+field1.Title+'</h4>';
-                  popularProd  += '<h5 class="category">'+field1.category+'</h5>';
-                  popularProd  += '<p class="price" style="font-size:14px;"><b>Price:</b> $'+field1.price+'</p>';
-                  popularProd  += '<p class="desc" style="font-size:12px;">'+field1.Description+'</p>';
-                  popularProd  += '<span class="popularity"style="font-size:12px;"><b>Popularity: </b>'+field1.popularity+'</span>';
-                  popularProd  += '<br>';
-                  popularProd  += '<span class="onsale"style="font-size:12px;"><b>OnSale Status: </b>'+field1.onsale+'</span>';
-                  popularProd  += '</li>';
-                  popularprodArray1.push(field1.productID);
-                          }
-                  return i < 20; 
-             
-             }
-           }); 
-	  //=================DEALS OF THE DAY SECTION=====//
-            $.each(result.products, function(j, field2){
-	     while (onsaleprodArray2.length < 5){	    
-             if (field2.onsale == "Yes"){
-                  onsaleProd   += '<li><div class="bannerImg"><img src="'+field2.imgPath+'" style="width:180px;height:180px;"/></div>';
-                  onsaleProd   += '<h4 class="title">'+field2.Title+'</h4>';
-                  onsaleProd   += '<h5 class="category">'+field2.category+'</h5>';
-                  onsaleProd   += '<p class="price" style="font-size:14px;"><b>Price:</b> $'+field2.price+'</p>';
-                  onsaleProd   += '<p class="desc" style="font-size:12px;">'+field2.Description+'</p>';
-                  onsaleProd   += '<span class="popularity"style="font-size:12px;"><b>Popularity: </b>'+field2.popularity+'</span>';
-                  onsaleProd   += '<br>';
-                  onsaleProd   += '<span class="onsale"style="font-size:12px;"><b>OnSale Status: </b>'+field2.onsale+'</span>';
-                  onsaleProd   += '</li>';
-		  onsaleprodArray2.push(field2.productID);   
-	     }
-                      return j < 20;
-         
-           }
-                    
-            });
-	
-	
-        var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
-        $('#popularProducts').append($ul1);
-        var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
-        $('#dealsOftheDay').append($ul2);
-	
-		
-        });
-});  
-	
-       
-	
-	
-</script>
 </head>
 
 <body id="page-top" class="index">
@@ -300,8 +203,100 @@ $(document).ready(function(){
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.js"></script> -->
-
+<script src="jquery-3.2.1.min.js"></script>   
 <script>
+	
+	
+function checkCategory(){
+	
+	$(document).ready(function(){
+		 $.getJSON("ProductsPaintings.json", function(result){
+			 //============PRODUCTS SECTION================//
+	     $("#checkbox1").change(function(){
+               $.each(result.products, function(k, field3){    
+		  if (this.checked) {
+		   field3.category="Abstract";
+		  if (field3.category == "Abstract"){
+                  allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;"/></div>';
+                  allProd   += '<h1 class="title">'+field3.Title+'</h1>';
+                  allProd   += '<h3 class="category">'+field3.category+'</h3>';
+                  allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
+                  allProd   += '<p class="desc" style="font-size:20px;">'+field3.Description+'</p>';
+                  allProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field3.popularity+'</span>';
+                  allProd   += '<br>';
+                  allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
+                  allProd   += '</li>';
+		 return k < 20;
+	     }
+		     
+	     }else{
+		     console.log("ERROR");
+	        }
+          });
+        });
+	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
+        $('#productCategory').append($ul3);
+     });
+  });
+}
+$(document).ready(function(){
+       
+        $.getJSON("ProductsPaintings.json", function(result){
+         var popularProd = '';
+         var onsaleProd = '';
+	 var allProd = '';
+         var popularprodArray1 = [];
+         var onsaleprodArray2 = [];
+	  //========POPULAR PRODUCTS SECTION ========//
+            $.each(result.products, function(i, field1){
+            while (popularprodArray1.length < 5){
+             if (field1.popularity == "High"){
+                  popularProd  += '<li><div class="bannerImg"><img src="'+field1.imgPath+'" style="width:180px;height:180px;"/></div>';
+                  popularProd  += '<h4 class="title">'+field1.Title+'</h4>';
+                  popularProd  += '<h5 class="category">'+field1.category+'</h5>';
+                  popularProd  += '<p class="price" style="font-size:14px;"><b>Price:</b> $'+field1.price+'</p>';
+                  popularProd  += '<p class="desc" style="font-size:12px;">'+field1.Description+'</p>';
+                  popularProd  += '<span class="popularity"style="font-size:12px;"><b>Popularity: </b>'+field1.popularity+'</span>';
+                  popularProd  += '<br>';
+                  popularProd  += '<span class="onsale"style="font-size:12px;"><b>OnSale Status: </b>'+field1.onsale+'</span>';
+                  popularProd  += '</li>';
+                  popularprodArray1.push(field1.productID);
+                          }
+                  return i < 20; 
+             
+             }
+           }); 
+	  //=================DEALS OF THE DAY SECTION=====//
+            $.each(result.products, function(j, field2){
+	     while (onsaleprodArray2.length < 5){	    
+             if (field2.onsale == "Yes"){
+                  onsaleProd   += '<li><div class="bannerImg"><img src="'+field2.imgPath+'" style="width:180px;height:180px;"/></div>';
+                  onsaleProd   += '<h4 class="title">'+field2.Title+'</h4>';
+                  onsaleProd   += '<h5 class="category">'+field2.category+'</h5>';
+                  onsaleProd   += '<p class="price" style="font-size:14px;"><b>Price:</b> $'+field2.price+'</p>';
+                  onsaleProd   += '<p class="desc" style="font-size:12px;">'+field2.Description+'</p>';
+                  onsaleProd   += '<span class="popularity"style="font-size:12px;"><b>Popularity: </b>'+field2.popularity+'</span>';
+                  onsaleProd   += '<br>';
+                  onsaleProd   += '<span class="onsale"style="font-size:12px;"><b>OnSale Status: </b>'+field2.onsale+'</span>';
+                  onsaleProd   += '</li>';
+		  onsaleprodArray2.push(field2.productID);   
+	     }
+                      return j < 20;
+         
+           }
+                    
+            });
+	
+	
+        var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
+        $('#popularProducts').append($ul1);
+        var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
+        $('#dealsOftheDay').append($ul2);
+	
+		
+        });
+});  
+	
 function myMap() {
   var myCenter = new google.maps.LatLng(-36.844282, 174.730564);
   var mapCanvas = document.getElementById("map");
