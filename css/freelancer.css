@@ -516,7 +516,10 @@ input[type=submit]:hover {
 	float: left;
 }
 
-
+#dealsOftheDay{
+	width:100%;
+	
+}
 #dealsOftheDay h3{
         margin: 40px 15px 10px 15px;	
 	
