@@ -54,14 +54,14 @@ $(document).ready(function(){
             $.each(result.products, function(j, field2){
 	     while (onsaleprodArray2.length < 5){	    
              if (field2.onsale == "Yes"){
-                  onsaleProd   += '<li><div class="bannerImg"><img src="'+field2.imgPath+'" style="width:180px;height:180px;"/></div>';
-                  onsaleProd   += '<h4 class="title">'+field2.Title+'</h4>';
-                  onsaleProd   += '<h5 class="category">'+field2.category+'</h5>';
-                  onsaleProd   += '<p class="price" style="font-size:14px;"><b>Price:</b> $'+field2.price+'</p>';
-                  onsaleProd   += '<p class="desc" style="font-size:12px;">'+field2.Description+'</p>';
-                  onsaleProd   += '<span class="popularity"style="font-size:12px;"><b>Popularity: </b>'+field2.popularity+'</span>';
+                  onsaleProd   += '<li><div class="bannerImg"><img src="'+field2.imgPath+'" style="width:250px;height:250px;"/></div>';
+                  onsaleProd   += '<h1 class="title">'+field2.Title+'</h1>';
+                  onsaleProd   += '<h3 class="category">'+field2.category+'</h3>';
+                  onsaleProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field2.price+'</p>';
+                  onsaleProd   += '<p class="desc" style="font-size:20px;">'+field2.Description+'</p>';
+                  onsaleProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field2.popularity+'</span>';
                   onsaleProd   += '<br>';
-                  onsaleProd   += '<span class="onsale"style="font-size:12px;"><b>OnSale Status: </b>'+field2.onsale+'</span>';
+                  onsaleProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field2.onsale+'</span>';
                   onsaleProd   += '</li>';
 		  onsaleprodArray2.push(field2.productID);   
 	     }
@@ -72,10 +72,9 @@ $(document).ready(function(){
             });
 	
        //============PRODUCTS SECTION================//
-	$("#checkbox1").click(function(){
-         if (this.checked) {
-		  
-             $.each(result.products, function(k, field3){
+	$("#checkbox1").on('change',function(){
+             $.each(result.products, function(k, field3){    
+		  if (this.checked) {
 		   field3.category="Abstract";
 		  if (field3.category == "Abstract"){
                   allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;"/></div>';
@@ -88,11 +87,12 @@ $(document).ready(function(){
                   allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
                   allProd   += '</li>';
 		 return k < 20;
+	     }
+		     
 	     }else{
 		     console.log("ERROR");
-	     }
-		      })
-	     }
+	        }
+       })
 });
 	
         var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
