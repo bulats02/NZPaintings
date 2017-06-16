@@ -319,14 +319,14 @@ $(document).ready(function(){
 		  return k < 20;   
 	     }
 		 
-       var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
-        $('#paintingProducts1').append($ul3);
+       
 	  
           });
-	
+	var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
+        $('#paintingProducts1').append($ul3);
 	
 	  }else{
-		   $('#allprodList').remove($(allProd1));
+		   $('#allprodList').append($(allProd1));
 		   $('#paintingProducts1').empty();
 	  }
        });
