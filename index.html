@@ -105,7 +105,25 @@
 			<li><input id="checkbox9" type="checkbox">Sculpture</li>
 			<li><input id="checkbox10" type="checkbox">Portrait</li>
 		    </ul>
-		    <div id="paintingProducts">
+		    <div id="paintingProducts1">
+		   </div>
+		    <div id="paintingProducts2">
+		   </div>
+		     <div id="paintingProducts3">
+		   </div>
+			<div id="paintingProducts4">
+		   </div>
+			<div id="paintingProducts5">
+		   </div>
+			<div id="paintingProducts6">
+		   </div>
+			<div id="paintingProducts7">
+		   </div>
+			<div id="paintingProducts8">
+		   </div>
+			<div id="paintingProducts9">
+		   </div>
+			<div id="paintingProducts10">
 		   </div>
                 </div>
             </div>
@@ -279,7 +297,8 @@ $(document).ready(function(){
 	     var allProd8 = '';
 	     var allProd9 = '';
 	     var allProd10 = '';
-		
+	  
+	  //====1===//
 	   $("#checkbox1").click(function(){
            if (this.checked) {
                $.each(result.products, function(k, field3){    
@@ -291,7 +310,7 @@ $(document).ready(function(){
                   allProd1   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
                   allProd1   += '<p class="desc" style="font-size:20px;">'+field3.Description+'</p>';
                   allProd1   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field3.popularity+'</span>';
-                  allProd1  += '<br>';
+                  allProd1   += '<br>';
                   allProd1   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
                   allProd1   += '</li>';
 		
@@ -300,45 +319,18 @@ $(document).ready(function(){
 	  
           });
 	var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
-        $('#paintingProducts').append($ul3);
+        $('#paintingProducts1').append($ul3);
 	
 	  }else{
-		   $('#paintingProducts').empty();
+		   $('#paintingProducts1').empty();
 	  }
        });
-	//======//	
+	//===2===//	
         $("#checkbox2").click(function(){
            if (this.checked) {
                $.each(result.products, function(l, field4){    
 		  
-		  if (field4.category == "Abstract"){
-                  allProd1   += '<li><div class="productImg"><img src="'+field4.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
-                  allProd1   += '<h1 class="title">'+field4.Title+'</h1>';
-                  allProd1   += '<h3 class="category">'+field4.category+'</h3>';
-                  allProd1   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field4.price+'</p>';
-                  allProd1   += '<p class="desc" style="font-size:20px;">'+field4.Description+'</p>';
-                  allProd1   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field4.popularity+'</span>';
-                  allProd1   += '<br>';
-                  allProd1   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field4.onsale+'</span>';
-                  allProd1   += '</li>';
-		
-	     }
-		 return l < 20;     
-	  
-          });
-	var $ul4 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
-        $('#paintingProducts').append($ul4);
-	
-	  }else{
-		  $('#paintingProducts').empty();
-	       }
-       });
-	//======//
-	$("#checkbox2").click(function(){
-           if (this.checked) {
-               $.each(result.products, function(l, field4){    
-		  
-		  if (field4.category == "Abstract"){
+		  if (field4.category == "Still Life"){
                   allProd2   += '<li><div class="productImg"><img src="'+field4.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
                   allProd2   += '<h1 class="title">'+field4.Title+'</h1>';
                   allProd2   += '<h3 class="category">'+field4.category+'</h3>';
@@ -354,13 +346,228 @@ $(document).ready(function(){
 	  
           });
 	var $ul4 = $('<ul id="allprodList">').append($(allProd2));// append DOM only one time.
-        $('#paintingProducts').append($ul4);
+        $('#paintingProducts2').append($ul4);
 	
 	  }else{
-		  $('#paintingProducts').empty();
+		  $('#paintingProducts2').empty();
 	       }
        });
-       //======//
+	//===3===//
+	$("#checkbox3").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(m, field5){    
+		  
+		  if (field5.category == "Christmas"){
+                  allProd3   += '<li><div class="productImg"><img src="'+field5.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd3   += '<h1 class="title">'+field5.Title+'</h1>';
+                  allProd3   += '<h3 class="category">'+field5.category+'</h3>';
+                  allProd3   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field5.price+'</p>';
+                  allProd3   += '<p class="desc" style="font-size:20px;">'+field5.Description+'</p>';
+                  allProd3   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field5.popularity+'</span>';
+                  allProd3   += '<br>';
+                  allProd3   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field5.onsale+'</span>';
+                  allProd3   += '</li>';
+		
+	     }
+		 return m < 20;     
+	  
+          });
+	var $ul5 = $('<ul id="allprodList">').append($(allProd3));// append DOM only one time.
+        $('#paintingProducts3').append($ul5);
+	
+	  }else{
+		  $('#paintingProducts3').empty();
+	       }
+       });
+         //===4===//
+	$("#checkbox4").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(n, field6){    
+		  
+		  if (field6.category == "Sticker"){
+                  allProd4   += '<li><div class="productImg"><img src="'+field6.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd4   += '<h1 class="title">'+field6.Title+'</h1>';
+                  allProd4   += '<h3 class="category">'+field6.category+'</h3>';
+                  allProd4   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field6.price+'</p>';
+                  allProd4   += '<p class="desc" style="font-size:20px;">'+field6.Description+'</p>';
+                  allProd4   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field6.popularity+'</span>';
+                  allProd4   += '<br>';
+                  allProd4   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field6.onsale+'</span>';
+                  allProd4   += '</li>';
+		
+	     }
+		 return n< 20;     
+	  
+          });
+	var $ul6 = $('<ul id="allprodList">').append($(allProd4));// append DOM only one time.
+        $('#paintingProducts4').append($ul6);
+	
+	  }else{
+		  $('#paintingProducts4').empty();
+	       }
+       });	
+	 //===5===//
+      $("#checkbox5").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(o, field7){    
+		  
+		  if (field7.category == "Landscape"){
+                  allProd5   += '<li><div class="productImg"><img src="'+field7.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd5   += '<h1 class="title">'+field7.Title+'</h1>';
+                  allProd5   += '<h3 class="category">'+field7.category+'</h3>';
+                  allProd5   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field7.price+'</p>';
+                  allProd5   += '<p class="desc" style="font-size:20px;">'+field7.Description+'</p>';
+                  allProd5   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field7.popularity+'</span>';
+                  allProd5   += '<br>';
+                  allProd5   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field7.onsale+'</span>';
+                  allProd5   += '</li>';
+		
+	     }
+		 return o < 20;     
+	  
+          });
+	var $ul7 = $('<ul id="allprodList">').append($(allProd5));// append DOM only one time.
+        $('#paintingProducts5').append($ul7);
+	
+	  }else{
+		  $('#paintingProducts5').empty();
+	       }
+       });
+	 //===6===//
+	$("#checkbox6").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(p, field8){    
+		  
+		  if (field8.category == "Pop Art"){
+                  allProd6   += '<li><div class="productImg"><img src="'+field8.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd6   += '<h1 class="title">'+field8.Title+'</h1>';
+                  allProd6   += '<h3 class="category">'+field8.category+'</h3>';
+                  allProd6   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field8.price+'</p>';
+                  allProd6   += '<p class="desc" style="font-size:20px;">'+field8.Description+'</p>';
+                  allProd6   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field8.popularity+'</span>';
+                  allProd6  += '<br>';
+                  allProd6   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field8.onsale+'</span>';
+                  allProd6   += '</li>';
+		
+	     }
+		 return p < 20;     
+	  
+          });
+	var $ul8 = $('<ul id="allprodList">').append($(allProd6));// append DOM only one time.
+        $('#paintingProducts6').append($ul8);
+	
+	  }else{
+		  $('#paintingProducts6').empty();
+	       }
+       });
+	 //===7===//
+	$("#checkbox7").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(q, field9){    
+		  
+		  if (field9.category == "Split Canvas"){
+                  allProd7   += '<li><div class="productImg"><img src="'+field9.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd7   += '<h1 class="title">'+field9.Title+'</h1>';
+                  allProd7   += '<h3 class="category">'+field9.category+'</h3>';
+                  allProd7   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field9.price+'</p>';
+                  allProd7   += '<p class="desc" style="font-size:20px;">'+field9.Description+'</p>';
+                  allProd7   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field9.popularity+'</span>';
+                  allProd7   += '<br>';
+                  allProd7   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field9.onsale+'</span>';
+                  allProd7   += '</li>';
+		
+	     }
+		 return q < 20;     
+	  
+          });
+	var $ul9 = $('<ul id="allprodList">').append($(allProd7));// append DOM only one time.
+        $('#paintingProducts7').append($ul9);
+	
+	  }else{
+		  $('#paintingProducts7').empty();
+	       }
+       });	
+	 //===8===//
+	$("#checkbox8").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(r, field10){    
+		  
+		  if (field10.category == "Quote and Text"){
+                  allProd8   += '<li><div class="productImg"><img src="'+field10.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd8   += '<h1 class="title">'+field10.Title+'</h1>';
+                  allProd8   += '<h3 class="category">'+field10.category+'</h3>';
+                  allProd8   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field10.price+'</p>';
+                  allProd8   += '<p class="desc" style="font-size:20px;">'+field10.Description+'</p>';
+                  allProd8   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field10.popularity+'</span>';
+                  allProd8   += '<br>';
+                  allProd8   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field10.onsale+'</span>';
+                  allProd8   += '</li>';
+		
+	     }
+		 return r < 20;     
+	  
+          });
+	var $ul10 = $('<ul id="allprodList">').append($(allProd8));// append DOM only one time.
+        $('#paintingProducts8').append($ul10);
+	
+	  }else{
+		  $('#paintingProducts8').empty();
+	       }
+       });	
+	 //===9===//
+	$("#checkbox9").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(s, field11){    
+		  
+		  if (field11.category == "Sculpture"){
+                  allProd9   += '<li><div class="productImg"><img src="'+field11.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd9   += '<h1 class="title">'+field11.Title+'</h1>';
+                  allProd9   += '<h3 class="category">'+field11.category+'</h3>';
+                  allProd9   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field11.price+'</p>';
+                  allProd9   += '<p class="desc" style="font-size:20px;">'+field11.Description+'</p>';
+                  allProd9   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field11.popularity+'</span>';
+                  allProd9   += '<br>';
+                  allProd9   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field11.onsale+'</span>';
+                  allProd9   += '</li>';
+		
+	     }
+		 return s < 20;     
+	  
+          });
+	var $ul11 = $('<ul id="allprodList">').append($(allProd9));// append DOM only one time.
+        $('#paintingProducts9').append($ul11);
+	
+	  }else{
+		  $('#paintingProducts9').empty();
+	       }
+       });	
+	 //===10===//
+	$("#checkbox10").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(t, field12){    
+		  
+		  if (field12.category == "Portrait"){
+                  allProd10   += '<li><div class="productImg"><img src="'+field12.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd10   += '<h1 class="title">'+field12.Title+'</h1>';
+                  allProd10   += '<h3 class="category">'+field12.category+'</h3>';
+                  allProd10   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field12.price+'</p>';
+                  allProd10   += '<p class="desc" style="font-size:20px;">'+field12.Description+'</p>';
+                  allProd10   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field12.popularity+'</span>';
+                  allProd10   += '<br>';
+                  allProd10   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field12.onsale+'</span>';
+                  allProd10   += '</li>';
+		
+	     }
+		 return t < 20;     
+	  
+          });
+	var $ul12 = $('<ul id="allprodList">').append($(allProd10));// append DOM only one time.
+        $('#paintingProducts10').append($ul12);
+	
+	  }else{
+		  $('#paintingProducts10').empty();
+	       }
+       });
 
     });
 });  
