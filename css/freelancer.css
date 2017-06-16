@@ -278,5 +278,6 @@ input[type=submit]:hover {
 	list-style-type: none;
 }
 #popularprodList li{
-	display:inline;	
+	display: inline;
+	float: left;
 }
