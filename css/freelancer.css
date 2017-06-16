@@ -502,9 +502,9 @@ input[type=submit]:hover {
 #popularprodList{
 	border-radius: 5px;
 	background-color: transparent;
-	color: black;
+	color: white;
 	font-family: 'Alegreya', serif;
-	font-size: 16px;
+	font-size: 14px;
 	
 }
 
@@ -518,7 +518,7 @@ input[type=submit]:hover {
 #onsaleprodList{
 	border-radius: 5px;
 	background-color: transparent;
-	color: black;
+	color: white;
 	font-family: 'Alegreya', serif;
 	font-size: 16px;
 	
