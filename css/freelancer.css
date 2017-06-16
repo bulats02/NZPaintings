@@ -500,11 +500,12 @@ input[type=submit]:hover {
 }
 
 #popularprodList{
+	list-style-type: none;
 	border-radius: 5px;
 	background-color: transparent;
-	color: white;
+	color: black;
 	font-family: 'Alegreya', serif;
-	font-size: 14px;
+	font-size: 16px;
 	
 }
 
@@ -516,9 +517,10 @@ input[type=submit]:hover {
 }
 
 #onsaleprodList{
+	list-style-type: none;
 	border-radius: 5px;
 	background-color: transparent;
-	color: white;
+	color: black;
 	font-family: 'Alegreya', serif;
 	font-size: 16px;
 	
