@@ -282,3 +282,12 @@ input[type=submit]:hover {
 	float: left;
 	margin:10px;
 }
+#onsaleprodList{
+	float: left;
+	list-style-type: none;
+}
+#onsaleprodList li{
+	display: inline;
+	float: left;
+	margin:10px;
+}
