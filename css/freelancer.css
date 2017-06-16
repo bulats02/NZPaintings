@@ -286,10 +286,6 @@ input[type=submit]:hover {
 	width: 100%;
 }
 
-#dealsOftheDay{
-	width:100%;
-	
-}
 #dealsOftheDay h3{
         margin: 40px 15px 10px 15px;	
 	
@@ -309,4 +305,5 @@ input[type=submit]:hover {
 #onsaleprodList li{
         margin: 10px 15px 10px 20px;
 	float: left;
+	width: 100%;
 }
