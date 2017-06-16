@@ -67,12 +67,7 @@
 		 <img src="Images/Header.jpeg" style="width:100%; border-radius:7px;">
 		</div>
 				<section id="homeDisplay">
-				  <p>Welcome to the NZ Painting online webstore where you can browse and purchase a variety of artwork 
-					  which can be shipped worlwide.
-					  NZ Painting was established in 1904. Currently, our artworks being displayed in over 150 local cafes, 
-					  restaurants, and show homes around New Zealand. As we work with a great number of artists, NZ Painting has the
-					  advantage of being able to provide high quality artworks in a wide variety of styles at a reasonable and affordable
-					  prices.</p>
+				   <h3> Introduction </h3>
 				 </section>
 					
 				 <section id="popularProducts">
@@ -93,12 +88,18 @@
                 <div class="col-lg-12 text-center">
                     <h2>Products</h2>
                     <hr class="star-primary">
-	             <!--<div id= "productCategory">-->
-			
-			<ul> 
+		     <ul> <!--checkboxes-->
 			<li><input id="checkbox1" type="checkbox">Abstract</li>
-			</ul>
-	            <!--</div>-->
+			<li><input id="checkbox2" type="checkbox">Still Life</li>
+			<li><input id="checkbox3" type="checkbox">Christmas</li>
+			<li><input id="checkbox4" type="checkbox">Sticker</li>
+			<li><input id="checkbox5" type="checkbox">Landscape</li>
+			<li><input id="checkbox6" type="checkbox">Pop Art</li>
+			<li><input id="checkbox7" type="checkbox">Split Canvas</li>
+			<li><input id="checkbox8" type="checkbox">Quote and Text</li>
+			<li><input id="checkbox9" type="checkbox">Sculpture</li>
+			<li><input id="checkbox10" type="checkbox">Portrait</li>
+		    </ul>
                 </div>
             </div>
         </div>
@@ -149,9 +150,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>About</h2>
-                    <hr class="star-primary">
+                    <hr class="star-light">
                 </div>
-            </div
+            </div>
             <div id="aboutDisplay">
 				<aside id="map"></aside>
 				
@@ -278,7 +279,32 @@ $(document).ready(function(){
 	  
           });
 	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
-        $('#products').append($ul3);
+        $('.row').append($ul3);
+	
+	  }
+       });
+		
+        $("#checkbox2").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(l, field4){    
+		  
+		  if (field3.category == "Abstract"){
+                  allProd   += '<li><div class="productImg"><img src="'+field4.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd   += '<h1 class="title">'+field4.Title+'</h1>';
+                  allProd   += '<h3 class="category">'+field4.category+'</h3>';
+                  allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field4.price+'</p>';
+                  allProd   += '<p class="desc" style="font-size:20px;">'+field4.Description+'</p>';
+                  allProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field4.popularity+'</span>';
+                  allProd   += '<br>';
+                  allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field4.onsale+'</span>';
+                  allProd   += '</li>';
+		
+	     }
+		 return k < 20;     
+	  
+          });
+	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
+        $('.row').append($ul3);
 	
 	  }
        });
