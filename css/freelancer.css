@@ -287,10 +287,6 @@ input[type=submit]:hover {
 	float: left;
 }
 
-#dealsOftheDay h5{
-        margin: 40px 15px 10px 15px;	
-	
-}
 #onsaleprodList{
 	list-style-type: none;
 	border-radius: 5px;
