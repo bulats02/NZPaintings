@@ -258,30 +258,31 @@ $(document).ready(function(){
             });
 	
 		
-	     var allProd = '';
+	     var allProd1 = '';
+	     var allProd2 = '';
 	   $("#checkbox1").click(function(){
            if (this.checked) {
                $.each(result.products, function(k, field3){    
 		  
 		  if (field3.category == "Abstract"){
-                  allProd   += '<li><div class="productImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
-                  allProd   += '<h1 class="title">'+field3.Title+'</h1>';
-                  allProd   += '<h3 class="category">'+field3.category+'</h3>';
-                  allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
-                  allProd   += '<p class="desc" style="font-size:20px;">'+field3.Description+'</p>';
-                  allProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field3.popularity+'</span>';
-                  allProd   += '<br>';
-                  allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
-                  allProd   += '</li>';
+                  allProd1   += '<li><div class="productImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd1   += '<h1 class="title">'+field3.Title+'</h1>';
+                  allProd1   += '<h3 class="category">'+field3.category+'</h3>';
+                  allProd1   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
+                  allProd1   += '<p class="desc" style="font-size:20px;">'+field3.Description+'</p>';
+                  allProd1   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field3.popularity+'</span>';
+                  allProd1  += '<br>';
+                  allProd1   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
+                  allProd1   += '</li>';
 		
 	     }
 		 return k < 20;     
 	  
           });
-	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
+	var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
         $('.row').append($ul3);
 	
-	  }else if (!this.checked){
+	  }else{
 		  $('.row').remove('#allprodList');
 	  }
        });
@@ -291,22 +292,22 @@ $(document).ready(function(){
                $.each(result.products, function(l, field4){    
 		  
 		  if (field4.category == "Abstract"){
-                  allProd   += '<li><div class="productImg"><img src="'+field4.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
-                  allProd   += '<h1 class="title">'+field4.Title+'</h1>';
-                  allProd   += '<h3 class="category">'+field4.category+'</h3>';
-                  allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field4.price+'</p>';
-                  allProd   += '<p class="desc" style="font-size:20px;">'+field4.Description+'</p>';
-                  allProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field4.popularity+'</span>';
-                  allProd   += '<br>';
-                  allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field4.onsale+'</span>';
-                  allProd   += '</li>';
+                  allProd2   += '<li><div class="productImg"><img src="'+field4.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd2   += '<h1 class="title">'+field4.Title+'</h1>';
+                  allProd2   += '<h3 class="category">'+field4.category+'</h3>';
+                  allProd2   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field4.price+'</p>';
+                  allProd2   += '<p class="desc" style="font-size:20px;">'+field4.Description+'</p>';
+                  allProd2   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field4.popularity+'</span>';
+                  allProd2   += '<br>';
+                  allProd2   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field4.onsale+'</span>';
+                  allProd2   += '</li>';
 		
 	     }
 		 return l < 20;     
 	  
           });
-	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
-        $('.row').append($ul3);
+	var $ul4 = $('<ul id="allprodList">').append($(allProd2));// append DOM only one time.
+        $('.row').append($ul4);
 	
 	  }else if(!this.checked){
 		  $('.row').remove('#allprodList');
