@@ -320,61 +320,61 @@ input[type=submit]:hover {
 	list-style-type: none;
 }
 
-#paintingProducts1{
+.allProducts #paintingProducts1{
 	display: inline;
 	float: left;
 	margin:10px;	
 }
 
-#paintingProducts2{
+.allProducts #paintingProducts2{
 	display: inline;
 	float: left;
 	margin:10px;	
 }
 
-#paintingProducts3{
+.allProducts #paintingProducts3{
 	display: inline;
 	float: left;
 	margin:10px;
 }
 
-#paintingProducts4{
+.allProducts #paintingProducts4{
 	display: inline;
 	float: left;
 	margin:10px;	
 }
 
-#paintingProducts5{
+.allProducts #paintingProducts5{
 	display: inline;
 	float: left;
 	margin:10px;	
 }
 
-#paintingProducts6{
+.allProducts #paintingProducts6{
 	display: inline;
 	float: left;
 	margin:10px;	
 }
 
-#paintingProducts7{
+.allProducts #paintingProducts7{
 	display: inline;
 	float: left;
 	margin:10px;
 }
 
-#paintingProducts8{
+.allProducts #paintingProducts8{
 	display: inline;
 	float: left;
 	margin:10px;	
 }
 
-#paintingProducts9{
+.allProducts #paintingProducts9{
 	display: inline;
 	float: left;
 	margin:10px;	
 }
 
-#paintingProducts10{
+.allProducts #paintingProducts10{
 	display: inline;
 	float: left;
 	margin:10px;
