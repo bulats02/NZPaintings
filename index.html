@@ -28,9 +28,10 @@ $(document).ready(function(){
         $.getJSON("ProductsPaintings.json", function(result){
          var popularProd = '';
          var onsaleProd = '';
-         var prodList = [];
+         var popularprodArray1 = [];
+         var onsaleprodArray2 = [];
             $.each(result.products, function(i, field1){
-            while (prodList.length < 5){
+            while (popularprodArray1.length < 5){
              if (field1.popularity == "High"){
                   popularProd  += '<li><div class="bannerImg"><img src="'+field1.imgPath+'" style="width:250px;height:250px;"/></div>';
                   popularProd  += '<h1 class="title">'+field1.Title+'</h1>';
@@ -41,13 +42,14 @@ $(document).ready(function(){
                   popularProd  += '<br>';
                   popularProd  += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field1.onsale+'</span>';
                   popularProd  += '</li>';
-                  prodList.push(field1.productID);
+                  popularprodArray1.push(field1.productID);
                           }
                   return i < 20; 
              
              }
            });
             $.each(result.products, function(j, field2){
+	     while (onsaleprodArray2.length < 5){	    
              if (field2.onsale == "Yes"){
                   onsaleProd   += '<li><div class="bannerImg"><img src="'+field2.imgPath+'" style="width:100px;height:100px;"/></div>';
                   onsaleProd   += '<h1 class="title">'+field2.Title+'</h1>';
@@ -58,6 +60,8 @@ $(document).ready(function(){
                   onsaleProd   += '<br>';
                   onsaleProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field2.onsale+'</span>';
                   onsaleProd   += '</li>';
+		  onsaleprodArray2.push(field2.productID);   
+	     }
                       return j < 20;
          
            }
