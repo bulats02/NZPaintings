@@ -72,8 +72,8 @@ $(document).ready(function(){
             });
 	
        //============PRODUCTS SECTION================//
-		    $("#checkbox1").on('click', function(){
-         if ($(this).is(":checked")) {
+	$("#checkbox1").click(function(){
+         if (this.checked) {
 		  
              $.each(result.products, function(k, field3){
 		   field3.category="Abstract";
@@ -88,6 +88,8 @@ $(document).ready(function(){
                   allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
                   allProd   += '</li>';
 		 return k < 20;
+	     }else{
+		     console.log("ERROR");
 	     }
 		      })
 	     }
