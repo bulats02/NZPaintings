@@ -263,10 +263,23 @@ $(document).ready(function(){
            }
                     
             });
-	
+	    var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
+        $('#popularProducts').append($ul1);
+        var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
+        $('#dealsOftheDay').append($ul2);
 		
+	 //=================ALL PAINTING PRODUCTS SECTION=====//	
 	     var allProd1 = '';
 	     var allProd2 = '';
+	     var allProd3 = '';
+	     var allProd4 = '';
+	     var allProd5 = '';
+	     var allProd6 = '';
+	     var allProd7 = '';
+	     var allProd8 = '';
+	     var allProd9 = '';
+	     var allProd10 = '';
+		
 	   $("#checkbox1").click(function(){
            if (this.checked) {
                $.each(result.products, function(k, field3){    
@@ -293,8 +306,35 @@ $(document).ready(function(){
 		   $('#paintingProducts').empty();
 	  }
        });
-		
+	//======//	
         $("#checkbox2").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(l, field4){    
+		  
+		  if (field4.category == "Abstract"){
+                  allProd1   += '<li><div class="productImg"><img src="'+field4.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd1   += '<h1 class="title">'+field4.Title+'</h1>';
+                  allProd1   += '<h3 class="category">'+field4.category+'</h3>';
+                  allProd1   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field4.price+'</p>';
+                  allProd1   += '<p class="desc" style="font-size:20px;">'+field4.Description+'</p>';
+                  allProd1   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field4.popularity+'</span>';
+                  allProd1   += '<br>';
+                  allProd1   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field4.onsale+'</span>';
+                  allProd1   += '</li>';
+		
+	     }
+		 return l < 20;     
+	  
+          });
+	var $ul4 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
+        $('#paintingProducts').append($ul4);
+	
+	  }else{
+		  $('#paintingProducts').empty();
+	       }
+       });
+	//======//
+	$("#checkbox2").click(function(){
            if (this.checked) {
                $.each(result.products, function(l, field4){    
 		  
@@ -318,16 +358,11 @@ $(document).ready(function(){
 	
 	  }else{
 		  $('#paintingProducts').empty();
-	  }
+	       }
        });
+       //======//
 
-        var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
-        $('#popularProducts').append($ul1);
-        var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
-        $('#dealsOftheDay').append($ul2);
-	
-		
-        });
+    });
 });  
 	
 function myMap() {
