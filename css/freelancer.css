@@ -276,4 +276,5 @@ input[type=submit]:hover {
 #popularprodList{
 	float: left;
 	list-style-type: none;
+	width: 500px;
 }
