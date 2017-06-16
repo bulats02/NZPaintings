@@ -72,7 +72,7 @@ header {
   color: white;
 }
 header .container {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 header img {
@@ -307,4 +307,3 @@ input[type=submit]:hover {
 	float: left;
 	width: 100%;
 }
-
