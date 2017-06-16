@@ -305,13 +305,13 @@ input[type=submit]:hover {
 }
 
 #checkboxList{
-	float: left;
+	
 	list-style-type: none;
 }
 
 #checkboxList li{
 	display: inline;
-	float: left;
+	
 	margin:10px;
 }
 
