@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #18BC9C;
+  color: #6D7993;
 }
 h1,
 h2,
@@ -110,7 +110,7 @@ header .intro-text .name {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #18BC9C;
+  color: #6D7993;
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
@@ -118,7 +118,7 @@ header .intro-text .name {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #6D7993;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
@@ -189,7 +189,7 @@ section.success{
 footer .footer-below {
 color: white;
   padding: 25px 0;
-  background-color: #233140;
+  background-color: #96858F;
 }
 .scroll-top {
   position: fixed;
@@ -223,7 +223,7 @@ color: white;
   position: absolute;
   left: 0px;
   top: 0px;
-  background: #18BC9C;
+  background: #6D7993;
   outline: 0;
   transition: top 0.1s ease-in, background 0.5s linear;
 }
@@ -292,16 +292,3 @@ input[type=submit]:hover {
 	float: left;
 	margin:10px;
 }
-
-
-#productCategory{
-	width: 700px;
-	margin-bottom: 10px;
-}
-
-#productCategory h2 { margin: 200px 20px 20px 0;}
-
-
-
-#productCategory a { margin-left:10px;}
-
