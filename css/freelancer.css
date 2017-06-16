@@ -171,11 +171,11 @@ section.membership {
   color: white;
 }
 #products{
-	background-color: #DSD5D5;
+	background-color: #cccccc;
 }
 
 section.success{
-	background-color: #DSD5D5;
+	background-color: #cccccc;
 }
 @media (max-width: 767px) {
   section {
