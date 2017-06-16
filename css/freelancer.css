@@ -167,21 +167,22 @@ section h2 {
 }
 
 section.membership {
-  background: #18BC9C;
+  background: #6D7993;
   color: white;
 }
+#products{
+	background-color: #DSD5D5;
+}
 
+section.success{
+	background-color: #DSD5D5;
+}
 @media (max-width: 767px) {
   section {
     padding: 75px 0;
   }
   section.first {
     padding-top: 75px;
-  }
-}
-@media (min-width: 767px) {
-  #portfolio .portfolio-item {
-    margin: 0 0 30px;
   }
 }
 
