@@ -96,7 +96,7 @@
 	             <div id= "productCategory">
 			<h2> Product Category Browser </h2>
 			<ul style="float:left;"> 
-			<li><input id="checkbox1" type="checkbox" onchange="checkCategory()"  >Abstract</li>
+			<li><input id="checkbox1" type="checkbox" onclick="checkCategory()"  >Abstract</li>
 			</ul>
 	            </div>
                 </div>
@@ -214,7 +214,7 @@ function checkCategory(){
 	$(document).ready(function(){
           $.getJSON("ProductsPaintings.json", function(result){
 	     var allProd = '';
-	     $("#checkbox1").change(function(){
+	     $("#checkbox1").click(function(){
                $.each(result.products, function(k, field3){    
 		  if (this.checked) {
 		   field3.category="Abstract";
