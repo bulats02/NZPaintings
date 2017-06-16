@@ -71,16 +71,8 @@ $(document).ready(function(){
                     
             });
 	
-       
-		    
-        var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
-        $('#popularProducts').append($ul1);
-        var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
-        $('#dealsOftheDay').append($ul2);
-		
-	//============PRODUCTS SECTION================//
-	function checkCategory(){
-	$("#checkbox1").on('click', function(){
+       //============PRODUCTS SECTION================//
+		    $("#checkbox1").on('click', function(){
          if ($(this).is(":checked")) {
 		  
              $.each(result.products, function(k, field3){
@@ -100,9 +92,17 @@ $(document).ready(function(){
 		      })
 	     }
 });
-	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
+	
+        var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
+        $('#popularProducts').append($ul1);
+        var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
+        $('#dealsOftheDay').append($ul2);
+		var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
         $('#productCategory').append($ul3);
-	}
+	
+	
+	
+	
 		
         });
 });  
@@ -195,7 +195,7 @@ $(document).ready(function(){
     </section>
   
     <!-- Membership Section -->
-    <section class ="membership" id="membership">
+    <section id="membership">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
