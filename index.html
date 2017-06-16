@@ -72,7 +72,7 @@ $(document).ready(function(){
             });
 	
        //============PRODUCTS SECTION================//
-	$("#checkbox1").on('change',function(){
+	$("#checkbox1").change(function(){
              $.each(result.products, function(k, field3){    
 		  if (this.checked) {
 		   field3.category="Abstract";
