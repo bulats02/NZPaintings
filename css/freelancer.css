@@ -279,24 +279,3 @@ input[type=submit]:hover {
 #dealsOftheDay{
 	width: 100%:
 }
-#popularprodList{
-	list-style-type: none;
-	border-radius: 5px;
-	background-color: transparent;
-	color: white;
-}
-#popularprodList li{
-        margin: 10px 15px 10px 15px;
-	float: left;
-}
-
-#onsaleprodList{
-	list-style-type: none;
-	border-radius: 5px;
-	background-color: transparent;
-	color: white;
-}
-
-#onsaleprodList li{
-	float: left;
-}
