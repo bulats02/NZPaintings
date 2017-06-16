@@ -333,6 +333,8 @@ $(document).ready(function(){
 	//===2===//	
         $("#checkbox2").click(function(){
            if (this.checked) {
+		   if( !$.trim( $('#leftmenu').html() ).length ) {
+
                $.each(result.products, function(l, field4){    
 		  
 		  if (field4.category == "Still Life"){
@@ -350,6 +352,9 @@ $(document).ready(function(){
 		 return l < 20;     
 	  
           });
+       }else{
+	       $('#paintingProducts2').append('#allprodList');
+       }
 	var $ul4 = $('<ul id="allprodList">').append($(allProd2));// append DOM only one time.
         $('#paintingProducts2').append($ul4);
 	
@@ -360,6 +365,7 @@ $(document).ready(function(){
 	//===3===//
 	$("#checkbox3").click(function(){
            if (this.checked) {
+		   
                $.each(result.products, function(m, field5){    
 		  
 		  if (field5.category == "Christmas"){
