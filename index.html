@@ -64,18 +64,18 @@
     <header>
         <div class="container" id="maincontent" tabindex="-1">
             <div class="row">
-		 <img src="Images/Header.jpeg" style="width:100%; border-radius:8px;">
+		 <img src="Images/Header.jpeg" style="width:100%; border-radius:7px;">
 		</div>
 				<section id="homeDisplay">
 				   <h3> Introduction </h3>
 				 </section>
 					
 				 <section id="popularProducts">
-				 <h3 style="font-weight: 800;">Popular Paintings </h3>
+				 <h3 style="font-weight: 500;">Popular Paintings </h3>
 				</section>
 		
 				<section id="dealsOftheDay">
-				 <h3 style="font-weight: 800;">Deals of the day</h3>
+				 <h3 style="font-weight: 500;">Deals of the day</h3>
 				</section>
 				
         </div>
@@ -88,12 +88,12 @@
                 <div class="col-lg-12 text-center">
                     <h2>Products</h2>
                     <hr class="star-primary">
-	             <div id= "productCategory">
+	             //<div id= "productCategory">
 			<h2> Product Category Browser </h2>
-			<ul style="float:left;"> 
-			<li><input id="checkbox1" type="checkbox"   >Abstract</li>
+			<ul> 
+			<li><input id="checkbox1" type="checkbox">Abstract</li>
 			</ul>
-	            </div>
+	            //</div>
                 </div>
             </div>
         </div>
@@ -144,7 +144,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>About</h2>
-                    <hr class="star-primary">
+                    <hr class="star-light">
                 </div>
             </div>
             <div id="aboutDisplay">
@@ -258,7 +258,7 @@ $(document).ready(function(){
                $.each(result.products, function(k, field3){    
 		  
 		  if (field3.category == "Abstract"){
-                  allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;"/></div>';
+                  allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
                   allProd   += '<h1 class="title">'+field3.Title+'</h1>';
                   allProd   += '<h3 class="category">'+field3.category+'</h3>';
                   allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
@@ -272,8 +272,8 @@ $(document).ready(function(){
 		 return k < 20;     
 	  
           });
-		   var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
-        $('#productCategory').append($ul3);
+	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
+        $('#products').append($ul3);
 	
 	  }
        });
