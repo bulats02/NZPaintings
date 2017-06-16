@@ -325,15 +325,14 @@ $(document).ready(function(){
        
 	  
           });
-	  $('#allprodList').append($(allProd1));
-	 //var $ul3 = $('#allprodList').append($(allProd1));// append DOM only one time.
-       // $('#paintingProducts1').append($ul3);
+	
+	var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
+        $('#paintingProducts1').append($ul3);
 	
         }     
 	
 	  }else{
-		   allProd1='';							    
-		  // $('#allprodList').remove();
+		   allProd1='';			
 		   $('#paintingProducts1').empty();
 	  }
        });
