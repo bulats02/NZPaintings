@@ -209,13 +209,13 @@
 <script>
 	
 	
-function checkCategory(){
+//function checkCategory(){
 	
 	$(document).ready(function(){
           $.getJSON("ProductsPaintings.json", function(result){
 	     var allProd = '';
-	   // $("#checkbox1").click(function(){
-           if ('#checkbox1'.checked) {
+	   $("#checkbox1").click(function(){
+           if (this.checked) {
                $.each(result.products, function(k, field3){    
 		  
 		  if (field3.category == "Abstract"){
@@ -241,7 +241,7 @@ function checkCategory(){
         $('#productCategory').append($ul3);
      });
   });
-}
+//}
 $(document).ready(function(){
        
         $.getJSON("ProductsPaintings.json", function(result){
