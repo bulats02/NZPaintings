@@ -208,8 +208,8 @@
 function checkCategory(){
 	
 	$(document).ready(function(){
-		 $.getJSON("ProductsPaintings.json", function(result){
-			 //============PRODUCTS SECTION================//
+          $.getJSON("ProductsPaintings.json", function(result){
+	     var allProd = '';
 	     $("#checkbox1").change(function(){
                $.each(result.products, function(k, field3){    
 		  if (this.checked) {
@@ -242,7 +242,6 @@ $(document).ready(function(){
         $.getJSON("ProductsPaintings.json", function(result){
          var popularProd = '';
          var onsaleProd = '';
-	 var allProd = '';
          var popularprodArray1 = [];
          var onsaleprodArray2 = [];
 	  //========POPULAR PRODUCTS SECTION ========//
