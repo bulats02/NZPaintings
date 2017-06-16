@@ -108,6 +108,8 @@
 			
 		    <ul class="allProducts">	
 		    <li id="paintingProducts1">
+			    <ul id="allprodList>
+				    </ul>
 		   </li>
 		    <li id="paintingProducts2">
 		   </li>
@@ -304,6 +306,7 @@ $(document).ready(function(){
 	  //====1===//
 	   $("#checkbox1").click(function(){
            if (this.checked) {
+	    if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(k, field3){    
 		  
 		  if (field3.category == "Abstract"){
@@ -322,18 +325,22 @@ $(document).ready(function(){
        
 	  
           });
-	var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
-        $('#paintingProducts1').append($ul3);
+	  $('#allprodList').append($(allProd1));
+	 //var $ul3 = $('#allprodList').append($(allProd1));// append DOM only one time.
+       // $('#paintingProducts1').append($ul3);
+	
+        }     
 	
 	  }else{
-		   $('#allprodList').remove();
+		   allProd1='';							    
+		  // $('#allprodList').remove();
 		   $('#paintingProducts1').empty();
 	  }
        });
 	//===2===//	
         $("#checkbox2").click(function(){
            if (this.checked) {
-		   if( !$.trim( $('#leftmenu').html() ).length ) {
+		  
 
                $.each(result.products, function(l, field4){    
 		  
