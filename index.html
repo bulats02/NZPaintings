@@ -107,13 +107,11 @@
 		    </ul>
 			
 		    <ul class="allProducts">	
-		    <li id="paintingProducts1">
-			    <ul id="allprodList>
-				    </ul>
+		        <li id="paintingProducts1">
 		   </li>
-		    <li id="paintingProducts2">
+		        <li id="paintingProducts2">
 		   </li>
-		     <li id="paintingProducts3">
+		        <li id="paintingProducts3">
 		   </li>
 			<li id="paintingProducts4">
 		   </li>
@@ -321,9 +319,6 @@ $(document).ready(function(){
                   allProd1   += '</li>';
 		  return k < 20;   
 	     }
-		 
-       
-	  
           });
 	
 	var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
@@ -340,7 +335,7 @@ $(document).ready(function(){
         $("#checkbox2").click(function(){
            if (this.checked) {
 		  
-
+              if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(l, field4){    
 		  
 		  if (field4.category == "Still Life"){
@@ -360,14 +355,15 @@ $(document).ready(function(){
           });
 	 var $ul4 = $('<ul id="allprodList">').append($(allProd2));// append DOM only one time.
         $('#paintingProducts2').append($ul4);
-       }else{
+       }
+     }else{       allProd2='';	
 		  $('#paintingProducts2').empty();
 	       }
        });
 	//===3===//
 	$("#checkbox3").click(function(){
            if (this.checked) {
-		   
+	    if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(m, field5){    
 		  
 		  if (field5.category == "Christmas"){
@@ -387,14 +383,15 @@ $(document).ready(function(){
           });
 	var $ul5 = $('<ul id="allprodList">').append($(allProd3));// append DOM only one time.
         $('#paintingProducts3').append($ul5);
-	
-	  }else{
+	  }
+	  }else{  allProd3='';	
 		  $('#paintingProducts3').empty();
 	       }
        });
          //===4===//
 	$("#checkbox4").click(function(){
            if (this.checked) {
+	     if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(n, field6){    
 		  
 		  if (field6.category == "Sticker"){
@@ -414,14 +411,16 @@ $(document).ready(function(){
           });
 	var $ul6 = $('<ul id="allprodList">').append($(allProd4));// append DOM only one time.
         $('#paintingProducts4').append($ul6);
-	
+	   }
 	  }else{
+		  allProd4='';	
 		  $('#paintingProducts4').empty();
 	       }
        });	
 	 //===5===//
       $("#checkbox5").click(function(){
            if (this.checked) {
+		 if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(o, field7){    
 		  
 		  if (field7.category == "Landscape"){
@@ -441,13 +440,14 @@ $(document).ready(function(){
           });
 	var $ul7 = $('<ul id="allprodList">').append($(allProd5));// append DOM only one time.
         $('#paintingProducts5').append($ul7);
-	
-	  }else{
+		 }
+	  }else{  allProd5='';	
 		  $('#paintingProducts5').empty();
 	       }
        });
 	 //===6===//
 	$("#checkbox6").click(function(){
+	 if( !$.trim( $('#leftmenu').html() ).length ) {
            if (this.checked) {
                $.each(result.products, function(p, field8){    
 		  
@@ -468,14 +468,15 @@ $(document).ready(function(){
           });
 	var $ul8 = $('<ul id="allprodList">').append($(allProd6));// append DOM only one time.
         $('#paintingProducts6').append($ul8);
-	
-	  }else{
+	   }
+	  }else{  allProd6='';	
 		  $('#paintingProducts6').empty();
 	       }
        });
 	 //===7===//
 	$("#checkbox7").click(function(){
            if (this.checked) {
+		   if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(q, field9){    
 		  
 		  if (field9.category == "Split Canvas"){
@@ -495,14 +496,15 @@ $(document).ready(function(){
           });
 	var $ul9 = $('<ul id="allprodList">').append($(allProd7));// append DOM only one time.
         $('#paintingProducts7').append($ul9);
-	
-	  }else{
+	  }
+	  }else{  allProd7='';	
 		  $('#paintingProducts7').empty();
 	       }
        });	
 	 //===8===//
 	$("#checkbox8").click(function(){
            if (this.checked) {
+	      if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(r, field10){    
 		  
 		  if (field10.category == "Quote and Text"){
@@ -522,14 +524,15 @@ $(document).ready(function(){
           });
 	var $ul10 = $('<ul id="allprodList">').append($(allProd8));// append DOM only one time.
         $('#paintingProducts8').append($ul10);
-	
-	  }else{
+	      }
+	  }else{  allProd8='';	
 		  $('#paintingProducts8').empty();
 	       }
        });	
 	 //===9===//
 	$("#checkbox9").click(function(){
            if (this.checked) {
+		   if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(s, field11){    
 		  
 		  if (field11.category == "Sculpture"){
@@ -549,14 +552,15 @@ $(document).ready(function(){
           });
 	var $ul11 = $('<ul id="allprodList">').append($(allProd9));// append DOM only one time.
         $('#paintingProducts9').append($ul11);
-	
-	  }else{
+		   }
+	  }else{  allProd9='';	
 		  $('#paintingProducts9').empty();
 	       }
        });	
 	 //===10===//
 	$("#checkbox10").click(function(){
            if (this.checked) {
+		   if( !$.trim( $('#leftmenu').html() ).length ) {
                $.each(result.products, function(t, field12){    
 		  
 		  if (field12.category == "Portrait"){
@@ -576,8 +580,8 @@ $(document).ready(function(){
           });
 	var $ul12 = $('<ul id="allprodList">').append($(allProd10));// append DOM only one time.
         $('#paintingProducts10').append($ul12);
-	
-	  }else{
+		   }
+	  }else{  allProd10='';	
 		  $('#paintingProducts10').empty();
 	       }
        });
