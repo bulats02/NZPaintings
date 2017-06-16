@@ -516,6 +516,12 @@ input[type=submit]:hover {
 	float: left;
 }
 
+
+#dealsOftheDay h3{
+        margin: 10px 15px 10px 15px;	
+	
+}
+
 #onsaleprodList{
 	list-style-type: none;
 	border-radius: 5px;
@@ -528,6 +534,6 @@ input[type=submit]:hover {
 }
 
 #onsaleprodList li{
-        margin: 30px 15px 10px 20px;
+        margin: 10px 15px 10px 20px;
 	float: left;
 }
