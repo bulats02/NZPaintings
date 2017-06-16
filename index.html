@@ -215,7 +215,7 @@ $(document).ready(function(){
             $.each(result.products, function(i, field1){
             while (popularprodArray1.length < 5){
              if (field1.popularity == "High"){
-                  popularProd  += '<li><div class="bannerImg"><img src="'+field1.imgPath+'" style="width:180px;height:180px;"/></div>';
+                  popularProd  += '<li><div class="productImg"><img src="'+field1.imgPath+'" style="width:180px;height:180px;"/></div>';
                   popularProd  += '<h4 class="title">'+field1.Title+'</h4>';
                   popularProd  += '<h5 class="category">'+field1.category+'</h5>';
                   popularProd  += '<p class="price" style="font-size:16px;"><b>Price:</b> $'+field1.price+'</p>';
@@ -234,7 +234,7 @@ $(document).ready(function(){
             $.each(result.products, function(j, field2){
 	     while (onsaleprodArray2.length < 5){	    
              if (field2.onsale == "Yes"){
-                  onsaleProd   += '<li><div class="bannerImg"><img src="'+field2.imgPath+'" style="width:180px;height:180px;"/></div>';
+                  onsaleProd   += '<li><div class="productImg"><img src="'+field2.imgPath+'" style="width:180px;height:180px;"/></div>';
                   onsaleProd   += '<h4 class="title">'+field2.Title+'</h4>';
                   onsaleProd   += '<h5 class="category">'+field2.category+'</h5>';
                   onsaleProd   += '<p class="price" style="font-size:16px;"><b>Price:</b> $'+field2.price+'</p>';
@@ -258,7 +258,7 @@ $(document).ready(function(){
                $.each(result.products, function(k, field3){    
 		  
 		  if (field3.category == "Abstract"){
-                  allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
+                  allProd   += '<li><div class="productImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;margin: 30px 0 30px 10px;"/></div>';
                   allProd   += '<h1 class="title">'+field3.Title+'</h1>';
                   allProd   += '<h3 class="category">'+field3.category+'</h3>';
                   allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
