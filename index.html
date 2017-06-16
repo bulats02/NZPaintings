@@ -215,8 +215,9 @@ function checkCategory(){
           $.getJSON("ProductsPaintings.json", function(result){
 	     var allProd = '';
 	   // $("#checkbox1").click(function(){
+           if ('#checkbox1'.checked) {
                $.each(result.products, function(k, field3){    
-		  if ('#checkbox1'.checked) {
+		  
 		  if (field3.category == "Abstract"){
                   allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;"/></div>';
                   allProd   += '<h1 class="title">'+field3.Title+'</h1>';
@@ -227,13 +228,14 @@ function checkCategory(){
                   allProd   += '<br>';
                   allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
                   allProd   += '</li>';
-		 return k < 20;
+		
 	     }
-		     
-	     }else{
-		     console.log("ERROR");
-	        }
+		 return k < 20;     
+	     //else{
+		    // console.log("ERROR");
+	       // }
           });
+	  }
       // });
 	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
         $('#productCategory').append($ul3);
