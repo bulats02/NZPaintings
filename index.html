@@ -208,40 +208,7 @@
 
 <script>
 	
-	
-//function checkCategory(){
-	
-	$(document).ready(function(){
-          $.getJSON("ProductsPaintings.json", function(result){
-	     var allProd = '';
-	   $("#checkbox1").click(function(){
-           if (this.checked) {
-               $.each(result.products, function(k, field3){    
-		  
-		  if (field3.category == "Abstract"){
-                  allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;"/></div>';
-                  allProd   += '<h1 class="title">'+field3.Title+'</h1>';
-                  allProd   += '<h3 class="category">'+field3.category+'</h3>';
-                  allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
-                  allProd   += '<p class="desc" style="font-size:20px;">'+field3.Description+'</p>';
-                  allProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field3.popularity+'</span>';
-                  allProd   += '<br>';
-                  allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
-                  allProd   += '</li>';
-		
-	     }
-		 return k < 20;     
-	     //else{
-		    // console.log("ERROR");
-	       // }
-          });
-	  }
-      // });
-	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
-        $('#productCategory').append($ul3);
-     });
-  });
-//}
+
 $(document).ready(function(){
        
         $.getJSON("ProductsPaintings.json", function(result){
@@ -289,11 +256,36 @@ $(document).ready(function(){
                     
             });
 	
-	
+		
+	     var allProd = '';
+	   $("#checkbox1").click(function(){
+           if (this.checked) {
+               $.each(result.products, function(k, field3){    
+		  
+		  if (field3.category == "Abstract"){
+                  allProd   += '<li><div class="bannerImg"><img src="'+field3.imgPath+'" style="width:250px;height:250px;"/></div>';
+                  allProd   += '<h1 class="title">'+field3.Title+'</h1>';
+                  allProd   += '<h3 class="category">'+field3.category+'</h3>';
+                  allProd   += '<p class="price" style="font-size:24px;"><b>Price:</b> $'+field3.price+'</p>';
+                  allProd   += '<p class="desc" style="font-size:20px;">'+field3.Description+'</p>';
+                  allProd   += '<span class="popularity"style="font-size:18px;"><b>Popularity: </b>'+field3.popularity+'</span>';
+                  allProd   += '<br>';
+                  allProd   += '<span class="onsale"style="font-size:18px;"><b>OnSale Status: </b>'+field3.onsale+'</span>';
+                  allProd   += '</li>';
+		
+	     }
+		 return k < 20;     
+	  
+          });
+	  }
+       });
+
         var $ul1 = $('<ul id="popularprodList">').append($(popularProd));// append DOM only one time.
         $('#popularProducts').append($ul1);
         var $ul2 = $('<ul id="onsaleprodList">').append($(onsaleProd));// append DOM only one time.
         $('#dealsOftheDay').append($ul2);
+	var $ul3 = $('<ul id="allprodList">').append($(allProd));// append DOM only one time.
+        $('#productCategory').append($ul3);
 	
 		
         });
