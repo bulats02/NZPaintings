@@ -105,6 +105,8 @@
 			<li><input id="checkbox9" type="checkbox">Sculpture</li>
 			<li><input id="checkbox10" type="checkbox">Portrait</li>
 		    </ul>
+		    <div id="paintingProducts">
+		   </div>
                 </div>
             </div>
         </div>
@@ -285,10 +287,10 @@ $(document).ready(function(){
 	  
           });
 	var $ul3 = $('<ul id="allprodList">').append($(allProd1));// append DOM only one time.
-        $('.row').append($ul3);
+        $('#paintingProducts').append($ul3);
 	
 	  }else{
-		  $('.row').remove('#allprodList');
+		   $('#paintingProducts').empty();
 	  }
        });
 		
@@ -312,10 +314,10 @@ $(document).ready(function(){
 	  
           });
 	var $ul4 = $('<ul id="allprodList">').append($(allProd2));// append DOM only one time.
-        $('.row').append($ul4);
+        $('#paintingProducts').append($ul4);
 	
-	  }else if(!this.checked){
-		  $('.row').remove('#allprodList');
+	  }else{
+		  $('#paintingProducts').empty();
 	  }
        });
 
