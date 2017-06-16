@@ -273,4 +273,6 @@ input[type=submit]:hover {
 	margin: 20px 15px 20px 15px;
 	float: left;
 }
-
+#popularprodList li{
+	float: left;
+}
