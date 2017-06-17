@@ -316,7 +316,6 @@ input[type=submit]:hover {
 .allProducts{
 	float: left;
 	list-style-type: none;
-	width: 100%;
 }
 
 .allProducts #paintingProducts1{
