@@ -305,31 +305,30 @@ input[type=submit]:hover {
 }
 
 #checkboxList{
-	
 	list-style-type: none;
 }
 
 #checkboxList li{
 	display: inline;
-	
 	margin:10px;
 }
 
 .allProducts{
 	float: left;
 	list-style-type: none;
+	width: 500px;
 }
 
 .allProducts #paintingProducts1{
 	display: inline;
 	float: left;
-	margin:10px;	
+	margin:2px 5px 5px 5px;	
 }
 
 .allProducts #paintingProducts2{
 	display: inline;
 	float: left;
-	margin:10px;	
+	margin:2px 5px 5px 5px;		
 }
 
 .allProducts #paintingProducts3{
