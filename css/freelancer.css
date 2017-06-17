@@ -307,7 +307,7 @@ input[type=submit]:hover {
 #checkboxList{
 	list-style-type: none;
 	font-weight:bold;
-	font-size: 18px;
+	font-size: 17px;
 }
 
 #checkboxList li{
