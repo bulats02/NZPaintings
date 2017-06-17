@@ -316,19 +316,19 @@ input[type=submit]:hover {
 .allProducts{
 	float: left;
 	list-style-type: none;
-	width: 500px;
+	width: 100%;
 }
 
 .allProducts #paintingProducts1{
 	display: inline;
 	float: left;
-	margin:2px 5px 5px 5px;	
+	margin:10px;	
 }
 
 .allProducts #paintingProducts2{
 	display: inline;
 	float: left;
-	margin:2px 5px 5px 5px;		
+	margin:10px;		
 }
 
 .allProducts #paintingProducts3{
